@@ -63,15 +63,15 @@ def solve_single_parameter_set(
     all_topology_hypoxia_dict, normalization_value = model.solve_experiment(x)
 
     solutions_reporterP_simple = np.append(
-        all_topology_hypoxia_dict["simple"][6.6]["reporterP"],
+        all_topology_hypoxia_dict["simple"][x[0]]["reporterP"],
         all_topology_hypoxia_dict["simple"][138.0]["reporterP"][0]
     )
     solutions_reporterP_H1a_fb = np.append(
-        all_topology_hypoxia_dict["H1a_fb"][6.6]["reporterP"],
+        all_topology_hypoxia_dict["H1a_fb"][x[0]]["reporterP"],
         all_topology_hypoxia_dict["H1a_fb"][138.0]["reporterP"][0]
     )
     solutions_reporterP_H2a_fb = np.append(
-        all_topology_hypoxia_dict["H2a_fb"][6.6]["reporterP"],
+        all_topology_hypoxia_dict["H2a_fb"][x[0]]["reporterP"],
         all_topology_hypoxia_dict["H2a_fb"][138.0]["reporterP"][0]
     )
 

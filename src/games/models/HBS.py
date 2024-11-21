@@ -568,7 +568,7 @@ class HBS_model:
             )
             all_topology_hypoxia_dict[topology] = solution_hypoxia_dict
 
-        normalization_value = np.mean(all_topology_hypoxia_dict["simple"][6.6]['reporterP'])
+        normalization_value = np.mean(all_topology_hypoxia_dict["simple"][x[0]]['reporterP'])
 
         return all_topology_hypoxia_dict, normalization_value
 
@@ -607,7 +607,7 @@ class HBS_model:
             x,
             "simple"
         ) 
-        normalization_value = np.mean(solution_hypoxia_dict[6.6]['reporterP'])
+        normalization_value = np.mean(solution_hypoxia_dict[x[0]]['reporterP'])
 
         self.t_hypoxia = self.t_hypoxia_plot
         topologies = ["simple", "H1a_fb", "H2a_fb"]
@@ -622,15 +622,15 @@ class HBS_model:
             all_topology_hypoxia_dict[topology] = solution_hypoxia_dict
 
         solutions_reporterP_simple = np.append(
-            all_topology_hypoxia_dict["simple"][6.6]["reporterP"],
+            all_topology_hypoxia_dict["simple"][x[0]]["reporterP"],
             all_topology_hypoxia_dict["simple"][138.0]["reporterP"][0]
         )
         solutions_reporterP_H1a_fb = np.append(
-            all_topology_hypoxia_dict["H1a_fb"][6.6]["reporterP"],
+            all_topology_hypoxia_dict["H1a_fb"][x[0]]["reporterP"],
             all_topology_hypoxia_dict["H1a_fb"][138.0]["reporterP"][0]
         )
         solutions_reporterP_H2a_fb = np.append(
-            all_topology_hypoxia_dict["H2a_fb"][6.6]["reporterP"],
+            all_topology_hypoxia_dict["H2a_fb"][x[0]]["reporterP"],
             all_topology_hypoxia_dict["H2a_fb"][138.0]["reporterP"][0]
         )
 

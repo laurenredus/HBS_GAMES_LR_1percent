@@ -49,7 +49,7 @@ def plot_timecourses(
         for i, label in enumerate(model.state_labels):
             axs[i].plot(
                 t,
-                all_topology_hypoxia_dict[topology][6.6][label],
+                all_topology_hypoxia_dict[topology][33][label],
                 color="black",
                 linestyle="dotted",
                 marker="None"
@@ -61,7 +61,7 @@ def plot_timecourses(
             axs[i].ticklabel_format(style='sci', axis='y', scilimits=(-2, 3))
             axs[i].set_box_aspect(1)
             axs[i].set_ylim(bottom = 0)
-            max_val = max(all_topology_hypoxia_dict[topology][6.6][label])
+            max_val = max(all_topology_hypoxia_dict[topology][33][label])
             axs[i].set_ylim(top = max_val + 0.1*max_val )
 
         if model.number_of_states == 10 or model.number_of_states == 13:

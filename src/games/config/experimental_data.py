@@ -35,23 +35,23 @@ def define_experimental_data(settings: dict
    """
 
    path = settings["context"] + "config/"
-   filename = path + "training_data.csv"
+   filename = path + "training_data_5percent.csv"
    df_exp = pd.read_csv(filename)
-   x = [6.6, 138.0]
-   exp_data_all = list(df_exp["y"])
-   exp_error_all = list(df_exp["y_err"])
+   x = [33, 138.0]
+   exp_data = list(df_exp["y"])
+   exp_error = list(df_exp["y_err"])
 
-   exp_simple_HBS = exp_data_all[:5] + [exp_data_all[6]]
-   exp_H1a_fb_HBS = exp_data_all[9:14] + [exp_data_all[15]]
-   exp_H2a_fb_HBS = exp_data_all[18:23] + [exp_data_all[24]]
+   # exp_simple_HBS = exp_data_all[:5] + [exp_data_all[6]]
+   # exp_H1a_fb_HBS = exp_data_all[9:14] + [exp_data_all[15]]
+   # exp_H2a_fb_HBS = exp_data_all[18:23] + [exp_data_all[24]]
    
    
-   error_simple_HBS = exp_error_all[:5] + [exp_error_all[6]]
-   error_H1a_fb_HBS = exp_error_all[9:14] + [exp_error_all[15]]
-   error_H2a_fb_HBS = exp_error_all[18:23] + [exp_error_all[24]]
+   # error_simple_HBS = exp_error_all[:5] + [exp_error_all[6]]
+   # error_H1a_fb_HBS = exp_error_all[9:14] + [exp_error_all[15]]
+   # error_H2a_fb_HBS = exp_error_all[18:23] + [exp_error_all[24]]
 
 
-   exp_data = exp_simple_HBS + exp_H1a_fb_HBS + exp_H2a_fb_HBS
-   exp_error = error_simple_HBS + error_H1a_fb_HBS + error_H2a_fb_HBS
+   # exp_data = exp_simple_HBS + exp_H1a_fb_HBS + exp_H2a_fb_HBS
+   # exp_error = error_simple_HBS + error_H1a_fb_HBS + error_H2a_fb_HBS
 
    return x, exp_data, exp_error

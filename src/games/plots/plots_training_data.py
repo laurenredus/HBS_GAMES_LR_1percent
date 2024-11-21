@@ -80,7 +80,7 @@ def plot_training_data_2d(
         capsize=1.5,
         ecolor="k",
         elinewidth=0.5,
-        label='1% O2 training data'
+        label='5% O2 training data'
     )
     (_, caps2, _) = axs[0].errorbar(
         t_experiment[0],
@@ -107,7 +107,7 @@ def plot_training_data_2d(
         capsize=1.5,
         ecolor="k",
         elinewidth=0.5,
-        label='1% O2 training data'
+        label='5% O2 training data'
     )
     (_, caps4, _) = axs[1].errorbar(
         t_experiment[0],
@@ -134,7 +134,7 @@ def plot_training_data_2d(
         capsize=1.5,
         ecolor="k",
         elinewidth=0.5,
-        label='1% O2 training data'
+        label='5% O2 training data'
     )
     (_, caps6, _) = axs[2].errorbar(
         t_experiment[0],
@@ -157,7 +157,7 @@ def plot_training_data_2d(
         linewidth=1.25,
         marker="None",
         color=plot_color1,
-        label="1% O2 best fit"
+        label="5% O2 best fit"
     )
     axs[0].plot(
         t_simulation[0],
@@ -175,7 +175,7 @@ def plot_training_data_2d(
         linewidth=1.25,
         marker="None",
         color=plot_color1,
-        label="1% O2 best fit"
+        label="5% O2 best fit"
     )
     axs[1].plot(
         t_simulation[0],
@@ -193,7 +193,7 @@ def plot_training_data_2d(
         linewidth=1.25,
         marker="None",
         color=plot_color1,
-        label="1% O2 best fit"
+        label="5% O2 best fit"
     )
     axs[2].plot(
         t_simulation[0],
